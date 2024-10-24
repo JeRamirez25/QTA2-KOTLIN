@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="57dp"
         android:backgroundTint="@color/primary_color"
-        android:text="@string/iniciar_sesi_n"
+        android:text="Iniciar Sesión"
         android:textColor="@color/secundary_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

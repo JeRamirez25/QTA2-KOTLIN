@@ -5,9 +5,9 @@
         android:id="@+id/mitades"
         android:icon="@drawable/mitades"/>
     <item android:title="Dos palabras"
-        android:id="@+id/rutas"
+        android:id="@+id/palabras"
         android:icon="@drawable/palabras"/>
     <item android:title="Quitar Fragmento"
-        android:id="@+id/perfil"
+        android:id="@+id/fragmento"
         android:icon="@drawable/fragmento"/>
 </menu>

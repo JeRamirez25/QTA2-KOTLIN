@@ -1,6 +1,8 @@
 package com.example.qta2
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,10 +18,10 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }*/
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, dosMitades())
-                .commit()
+        val botonInciosesion = findViewById<Button>(R.id.button)
+        botonInciosesion.setOnClickListener {
+            val intent = Intent(this,InicioActivity::class.java)
+            startActivity(intent)
         }
     }
 }

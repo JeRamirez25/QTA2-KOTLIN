@@ -1,33 +1,40 @@
-package com.example.qta2;
+package com.example.qta2
 
-import android.os.Bundle;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 
-public class dosPalabras extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_dos_palabras);
+class dosPalabras : Fragment() {
 
-        EditText inputEditText = findViewById(R.id.et_input);
-        TextView resultTextView = findViewById(R.id.tv_result);
-        Button solveButton = findViewById(R.id.btn_solve);
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        val root = inflater.inflate(R.layout.fragment_dos_palabras, container, false)
+        val inputEditText = root.findViewById<EditText>(R.id.et_input)
+        val resultTextView = root.findViewById<TextView>(R.id.tv_result)
+        val solveButton = root.findViewById<Button>(R.id.btn_solve)
 
-        solveButton.setOnClickListener(v -> {
-            String inputText = inputEditText.getText().toString().trim();
+        solveButton.setOnClickListener {
+            val inputText = inputEditText.text.toString().trim()
 
-            String[] words = inputText.split(" ");
+            val words = inputText.split(" ")
 
-            if (words.length == 2) {
-                String result = words[1] + " " + words[0];
-                resultTextView.setText(result);
+            if (words.size == 2) {
+                val result = "${words[1]} ${words[0]}"
+                resultTextView.text = result
             } else {
-                resultTextView.setText("Por favor, ingresa exactamente 2 palabras.");
+                resultTextView.text = "Por favor, ingresa exactamente 2 palabras."
             }
-        });
+        }
+        return root
     }
+
 }

@@ -23,12 +23,12 @@ class SeccionesActivity : AppCompatActivity() {
             insets
         }
 
-        replaceFragment(Buscar())
+        replaceFragment(dosMitades())
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.buscar -> replaceFragment(Buscar())
-                R.id.rutas -> replaceFragment(Rutas())
-                R.id.perfil -> replaceFragment(Perfil())
+                R.id.mitades -> replaceFragment(dosMitades())
+                R.id.palabras -> replaceFragment(dosPalabras())
+                R.id.fragmento -> replaceFragment(quitarFragmento())
             }
             true
         }
