@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quitar fragmento"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Te voy a ayudar a solucionar el problema de quitar el fragmento.\n\n1. Ingresa una cadena de caracteres en la que por lo menos existe 2 veces la letra h.\n2. Eliminaré de esa cadena la primera y la última aparición de la letra h, así como todos los caracteres entre ellas.\n3. Luego imprimiré la nueva cadena en pantalla."
+        android:textSize="16sp"
+        android:paddingBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingresa una cadena de caracteres"
+        android:inputType="text"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/btn_solve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#5AE4A8"
+        android:text="Solucionar" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="24dp"/>
+</LinearLayout>
